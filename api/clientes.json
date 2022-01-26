@@ -1,0 +1,29 @@
+[{
+    "id": 1,
+    "nombre": "King",
+    "apellido": "Drinnan",
+    "rut": "767-79-8157",
+    "telefono": "714-56-0602",
+    "status": "Activo"
+  }, {
+    "id": 2,
+    "nombre": "Gratia",
+    "apellido": "Fincher",
+    "rut": "245-68-8644",
+    "telefono": "121-12-0445",
+    "status": "Activo"
+  }, {
+    "id": 3,
+    "nombre": "Lee",
+    "apellido": "Dreng",
+    "rut": "652-29-5481",
+    "telefono": "681-58-3666",
+    "status": "Activo"
+  }, {
+    "id": 4,
+    "nombre": "Herculie",
+    "apellido": "Jessope",
+    "rut": "304-54-7514",
+    "telefono": "797-47-2406",
+    "status": "Activo"
+  }]

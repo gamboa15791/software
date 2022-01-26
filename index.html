@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/346186a094.js" crossorigin="anonymous"></script>
+
+
+
+    <script src="js/script.js"></script>
+    <title>Software</title>
+    <style>
+        .precio{
+            color:black;
+            font-weight: bold;
+        }
+        input{
+          text-align: center;
+          background-color: blue;
+          color: yellow;
+          font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <!-- Image and text -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Software</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicial <span class="sr-only">(current)</span></a>
+            </li>
+            
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    
+
+    <div class ="container">
+
+           <h2 class="alert alert-warning" id="titulo">ABM de Clientes</h2>
+
+           <!-- Button trigger modal -->
+           <label class="btn btn-light" id="addClient">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <i class="fas fa-user-plus"></i> Agregar Cliente
+</button>         
+           </label>
+
+          <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <dl >
+          <dt>Información de Cliente</dt>
+          <dd>Nombre: <input type="text" name="texto" placeholder="" id="newUserName"></dd>
+          <dd>Apellido:<input type="text" name="texto" placeholder="" id="newUserLastName"> </dd>
+          <dd>RUT;<input type="number" name="numero" placeholder="" id="newUserrut"> </dd>
+          <dd>Teléfono: <input type="tel" name="telefono" placeholder="" id="newUserPhone"></dd>
+          
+          </dl>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+           
+           <table class="table table-striped table-bordered table-responsive">
+                <th> ID </th><th>Nombre</th><th> Apellido</th> <th>RUT</th> <th>Teléfono</th> <th>Status</th>
+                    <tbody id="listita">
+
+                    </tbody>
+
+           </table>
+          
+    </div>
+
+<!-- INICIO Modal info de usuario -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Editar información</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div name='modal de cliente'>
+          <dl >
+          <dt>Información de Cliente</dt>
+          <dd>Nombre: <input type="text" name="texto" placeholder="" id="newUserName"></dd>
+          <dd>Apellido:<input type="text" name="texto" placeholder="" id="newUserLastName"> </dd>
+          <dd>RUT;<input type="number" name="numero" placeholder="" id="newUserrut"> </dd>
+          <dd>Teléfono: <input type="tel" name="telefono" placeholder="" id="newUserPhone"></dd>
+          
+          </dl>
+        </div> <br>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="editUserInfo();">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN Modal info de usuario -->
+
+    
+</body>
+
+</html>
